@@ -1,14 +1,3 @@
-/*Buscando e contando dados em Arrays = 
-
-Baseado no Array por categoria abaixo, faça os seguintes desafios
-
-* Contar os números de categorias e o número de livros em cada categoria
-* Contar o número de autores
-* Mostrar livros do autor Augusto Cury
-* Transformar a função acima em uma função que irá receber o nome do autor e devolver os livros desse autor.
-*/
-
-
 const booksByCategory = [
     { // um objeto, com um array que contem mais 3 objetos
         category: "Riqueza",
@@ -77,19 +66,7 @@ function countBooks(){
 //contar o número de categorias
 }
 
-// contar o número de autores, problema de contar o mesmo autor mais de uma vez
 function countAuthors(){
-    let authors = [];
-
-    for(let author of booksByCategory){
-        console.log("Numero de autores:" + author.books.length);
-    }
-
-}
-
-
-
-function countAuthorsAula(){
     let authors = [];
 
     for(let category of booksByCategory){
@@ -102,7 +79,7 @@ function countAuthorsAula(){
     console.log(`Total de autoroes: ${authors.length}, eles são:`, authors)
 }
 
-countAuthorsAula();
+countAuthors();
 
 // Mostrar os livros do autor Augusto Cury
 function showBooksOfAuthors(nameAuthor){
@@ -115,10 +92,7 @@ function showBooksOfAuthors(nameAuthor){
             }
         }
     }
-
-   // booksAuthor.join("\n"), o javascript transforma o objeto para uma string de maneira automatica
-   // separando os por vírgula, o metodo join, adiciona caracteres ao final de uma string, 
-   // a gente substitui a vírgula por uma quebra de linha.
+    
     console.log(booksAuthor.length > 0 ?
          `Livros do autor ${nameAuthor} encontrados:\n${booksAuthor.join("\n")}` :
          "Autor não encontrado");
